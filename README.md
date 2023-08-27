@@ -1,4 +1,4 @@
-# be-memed
+# be-memed [TODO]
 
 Sometimes we have a template inside a template:
 
@@ -22,5 +22,30 @@ than it is to:
 2.  Clone the inner template from the cloned outer template.
 
 be-memed helps make that process declarative.
+
+```html
+<template id=outer be-memed>
+    <template id=inner>
+        ...
+    </template>
+</template>
+```
+
+generates:
+
+```html
+<template id=outer be-memed>
+    <template id=inner be-recalled="a32123"></template>
+</template>
+```
+
+The contents of the original template can be obtained from:
+
+```JavaScript
+import {contentLookup} from 'be-memed/be-memed.js';
+const content = contentLookup.get('a32123');
+```
+
+
 
 
