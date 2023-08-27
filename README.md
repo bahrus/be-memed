@@ -1,5 +1,7 @@
 # be-memed [TODO]
 
+Cache templates contained within templates.
+
 Sometimes we have a template inside a template:
 
 ```html

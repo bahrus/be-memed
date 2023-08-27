@@ -1,16 +1,46 @@
 {
   "name": "be-memed",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Cache templates contained within templates.",
+  "keywords": [
+    "web components",
+    "web component",
+    "custom elements",
+    "custom element",
+    "built-in"
+  ],
+  "main": "be-memed.js",
+  "module": "be-memed.js",
+  "exports":{
+    ".": "./be-memed.js",
+    "./be-memed.js": "./be-memed.js"
+  },
+  "files": [
+    "*.js",
+    "types.d.ts"
+  ],
+  "types": "./types.d.ts",
+  "dependencies": {
+    "be-enhanced": "0.0.44",
+    "be-hive": "0.0.116",
+    "trans-render": "0.0.704",
+    "xtal-element": "0.0.577"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.37.1",
+    "may-it-serve": "0.0.5"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "node node_modules/may-it-serve/serve.js",
+    "test": "playwright test",
+    "safari": "npx playwright wk http://localhost:3030",
+    "update": "ncu -u && npm install"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bahrus/be-memed.git"
   },
-  "author": "",
+  "author": "anderson.bruce.b@gmail.com",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/bahrus/be-memed/issues"
