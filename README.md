@@ -44,8 +44,8 @@ generates:
 The contents of the original inner template can be obtained from:
 
 ```JavaScript
-import {contentLookup} from 'be-memed/be-memed.js';
-const content = contentLookup.get('a32123');
+import {getContent} from 'be-memed/be-memed.js';
+const content = getContent('a32123');
 ```
 
 
