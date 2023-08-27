@@ -41,7 +41,7 @@ generates:
 </template>
 ```
 
-The contents of the original template can be obtained from:
+The contents of the original inner template can be obtained from:
 
 ```JavaScript
 import {contentLookup} from 'be-memed/be-memed.js';
