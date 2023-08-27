@@ -35,7 +35,7 @@ generates:
 
 ```html
 <template id=outer be-memed>
-    <template id=inner be-recalled="a32123"></template>
+    <template id=inner be-memed-id="a32123"></template>
 </template>
 ```
 
