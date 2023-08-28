@@ -34,7 +34,8 @@ export class BeMemed extends BE {
             globalThis[templCntSym] = cnt + 1;
             let id = 'a' + cnt.toString(16);
             templ.setAttribute('be-memed-id', id);
-            map.set(id, templ.content);
+            const clone = templ.content.cloneNode(true);
+            map.set(id, clone);
             templ.innerHTML = '';
         }
     }
