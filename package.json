@@ -1,6 +1,6 @@
 {
   "name": "be-memed",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Cache templates contained within templates.",
   "keywords": [
     "web components",
@@ -11,7 +11,7 @@
   ],
   "main": "be-memed.js",
   "module": "be-memed.js",
-  "exports":{
+  "exports": {
     ".": "./be-memed.js",
     "./be-memed.js": "./be-memed.js"
   },
