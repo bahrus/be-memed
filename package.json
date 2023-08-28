@@ -1,6 +1,6 @@
 {
   "name": "be-memed",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cache templates contained within templates.",
   "keywords": [
     "web components",
