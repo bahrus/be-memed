@@ -28,7 +28,7 @@ than it is to:
 1.  Clone the outer template (with the inner template).
 2.  Clone the inner template from the cloned outer template.
 
-be-memed helps make that process declarative.
+be-memed helps make that process declarative, via a [be-enhanced](https://github.com/bahrus/be-enhanced) [custom enhancement](https://github.com/WICG/webcomponents/issues/1000).
 
 ```html
 <template id=outer be-memed>
