@@ -20,7 +20,7 @@ export class BeMemed extends BE {
         // primaryProp: 'to'
         };
     }
-    async attach(enhancedElement, enhancementInfo) {
+    async attach(enhancedElement) {
         let df;
         if (enhancedElement instanceof HTMLTemplateElement) {
             df = enhancedElement.content;
@@ -35,6 +35,7 @@ export class BeMemed extends BE {
             let id = 'a' + cnt.toString(16);
             templ.setAttribute('be-memed-id', id);
             const clone = templ.content.cloneNode(true);
+            this.attach(clone);
             map.set(id, clone);
             templ.innerHTML = '';
         }

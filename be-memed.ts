@@ -27,12 +27,12 @@ export class BeMemed extends BE<AP, Actions> implements Actions{
         } as BEConfig;
     }
 
-    override async attach(enhancedElement: Element, enhancementInfo: EnhancementInfo) {
+    override async attach(enhancedElement: Element | DocumentFragment) {
         let df : DocumentFragment | undefined;
         if(enhancedElement instanceof HTMLTemplateElement){
             df = enhancedElement.content
         }else{
-            df = enhancedElement as any as DocumentFragment;
+            df = enhancedElement as DocumentFragment;
         }
         const templs = df.querySelectorAll('template');
         for(const templ of templs){
@@ -41,6 +41,7 @@ export class BeMemed extends BE<AP, Actions> implements Actions{
             let id = 'a' + cnt.toString(16);
             templ.setAttribute('be-memed-id', id);
             const clone = templ.content.cloneNode(true) as DocumentFragment;
+            this.attach(clone);
             map.set(id, clone);
             templ.innerHTML = '';
 

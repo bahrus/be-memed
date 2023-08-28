@@ -44,7 +44,7 @@ generates:
 <template id=outer be-memed>
     <template id=inner be-memed-id="a32123"></template>
 </template>
-```
+```  
 
 The contents of the original inner template can be obtained from:
 
@@ -53,7 +53,6 @@ import {getContent} from 'be-memed/be-memed.js';
 const content = getContent('a32123');
 ```
 
-[TODO] Recursive logic.
 
 ## Running locally
 
